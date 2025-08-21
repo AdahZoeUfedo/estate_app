@@ -10,7 +10,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="font-bold text-lg my-10">Welcome to estate app</Text>
+      <Text className="font-bold text-lg my-10  font-rubik text-3xl">Welcome to estate app</Text>
       <Link href="/signin">SignIn</Link>
       <Link href="/(root)/(tabs)/explore">Explore</Link>
       <Link href="/(root)/(tabs)/profile">Profile</Link>
