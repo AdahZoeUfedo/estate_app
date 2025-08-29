@@ -11,10 +11,7 @@ export default function Index() {
       }}
     >
       <Text className="font-bold text-lg my-10  font-rubik text-3xl">Welcome to estate app</Text>
-      <Link href="/signin">SignIn</Link>
-      <Link href="/(root)/(tabs)/explore">Explore</Link>
-      <Link href="/(root)/(tabs)/profile">Profile</Link>
-      <Link href="/(root)/properties/[id]">Property</Link>
+
     </View>
   );
 }
