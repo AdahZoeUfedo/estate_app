@@ -29,11 +29,11 @@ const profile = () => {
     
     const handleLogout = async () => {};
       
-      if (result) {
+      /*if (result) {
         Alert.alert("Success", "You have been logged out successfully" );
       } else {
         Alert.alert("Error", "An error occured while logging out")
-      }
+      }*/
   return (
     <SafeAreaView className='h-full bg-white'>
       <ScrollView
