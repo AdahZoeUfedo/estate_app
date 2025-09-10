@@ -1,4 +1,4 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { Link } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
@@ -11,7 +11,16 @@ import Filters from "@/components/Filters";
 export default function Index() {
   return (
     <SafeAreaView className="bg-white h-full">
-      <View className="px-5">
+      <FlatList
+          data={[1, 2]}
+          renderItem={({item}) => <Card />}
+          keyExtractor={(item) => item.toString()}
+          numColumns={2}
+          contentContainerClassName="pb-32"
+          columnWrapperClassName="flex gap-5 px-5"
+          showsVerticalScrollIndicator={false}
+          ListHeaderComponent={
+            <View className="px-5">
         <View className="flex flex-row items-center justify-between mt-5">
           <View className="flex flex-row items-center">
             <Image source={images.avatar} className="size-12 rounded-full" />
@@ -39,11 +48,7 @@ export default function Index() {
                 See All</Text>            
             </TouchableOpacity>
           </View>
-          <View className="flex flex-row gap-5 mt-5">
-            <FeaturedCard />
-            <FeaturedCard />
-
-          </View>
+          
           </View>  
           <View className="flex flex-row items-center justify-between">
             <Text className="text-xl font-rubik-bold text-black-300">
@@ -54,14 +59,16 @@ export default function Index() {
                 See All</Text>            
             </TouchableOpacity>
           </View>
-
-          <Filters />
           <View className="flex flex-row gap-5 mt-5">
-            <Card />
-            <Card />
 
           </View>
+
+          <Filters />
+          
       </View>
+          }
+      />
+      
     </SafeAreaView>
   );
 }
