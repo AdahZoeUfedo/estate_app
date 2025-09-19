@@ -12,6 +12,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.zoeadah.estateapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
@@ -32,11 +33,9 @@
           "resizeMode": "cover",
           "backgroundColor": "#ffffff",
           "enableFullScreenImage_legacy": true
-
         }
-      
-    ],
-    [
+      ],
+      [
         "expo-font",
         {
           "fonts": [
@@ -52,6 +51,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7157c2e8-60f4-4160-aaf6-3ba74568ea78"
+      }
     }
   }
 }
